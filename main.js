@@ -17,7 +17,7 @@ function take_snapshot() {
 
 console.log('ml5 version is:', ml5.version);
 
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/tLUjNT_oN/model.json', modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/6wqaw8zaK/model.json', modelLoaded);
 
 function modelLoaded() {
     console.log("Your model has loaded");
@@ -34,8 +34,8 @@ function gotResult(error, results) {
     }
     else {
         console.log(results);
-        document.getElementById("result_object_name").innerHTML = results[0].label;
-        document.getElementById("result_object_accuracy").innerHTML = results[0].confidence.toFixed(2)*100+'%';
+        document.getElementById("result_people_name").innerHTML = results[0].label;
+        document.getElementById("result_people_accuracy").innerHTML = results[0].confidence.toFixed(2)*100+'%';
     }
 
 }
